@@ -1,6 +1,7 @@
 // INSERTION SORT - takes an ele & place it at its correct order
 // -> O(N^2) - [Average & Worst cases]
 // -> O(N) - [Best case]
+// Space Complexity -> O(N)
 
 import java.util.*;
 public class InsertionSort {
@@ -31,6 +32,20 @@ public class InsertionSort {
         }
     }
 
+    // RECURSIVE INSERTION SORT
+    public static void RecursiveInsertionSort(int arr[], int n, int index) {
+        if (index == n) return;
+
+        int j = index;
+        while (j > 0 && arr[j] < arr[j-1]) {
+            int temp = arr[j];
+            arr[j] = arr[j-1];
+            arr[j-1] = temp;
+            j--;
+        }
+        RecursiveInsertionSort(arr, n, index+1);
+    }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
 
@@ -44,8 +59,9 @@ public class InsertionSort {
             arr[i] = sc.nextInt();
         }
 
-        InsertionSortAlgo(arr, n);
-        ReverseInsertionSort(arr, n);
+//        InsertionSortAlgo(arr, n);
+//        ReverseInsertionSort(arr, n);
+        RecursiveInsertionSort(arr, n, 0);
 
         // printing arrays
         for (int i=0; i<n; i++) {

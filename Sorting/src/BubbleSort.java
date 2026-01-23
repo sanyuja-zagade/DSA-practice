@@ -1,6 +1,7 @@
 // BUBBLE SORT - push the max ele to the last by adjacent swaps
 // -> O(N^2) - [Average & Worst cases]
 // -> O(N) - [Best case]
+// -> O(N) - Space Complexity
 
 import java.util.*;
 
@@ -38,6 +39,25 @@ public class BubbleSort {
         }
     }
 
+    // RECURSIVE BUBBLE SORT
+    public static void RecursiveBubbleSort(int arr[], int n) {
+        if (n == 1) return;
+
+        boolean swapped = false;
+
+        for (int i=0; i<n-1; i++) {
+            if (arr[i] > arr[i+1]) {
+                int temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+                swapped = true;
+            }
+        }
+        if (!swapped) return;
+
+        RecursiveBubbleSort(arr, n-1);
+    }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
 
@@ -53,6 +73,7 @@ public class BubbleSort {
 
         BubbleSortAlgo(arr, n);
         ReverseBubbleSort(arr, n);
+        RecursiveBubbleSort(arr, n);
 
         // printing array
         for (int i=0; i<n; i++) {

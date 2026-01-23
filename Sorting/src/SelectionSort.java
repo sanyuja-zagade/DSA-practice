@@ -1,5 +1,6 @@
 // SELECTION SORT - selects min ele and push it to front
 // -> O(N^2) - [Best, Average, Worst cases]
+// Space Complexity -> O(1) - [No extra space used]
 
 import java.util.*;
 

@@ -1,6 +1,7 @@
 // QUICK SORT - pick a pivot and place it at it's correct position - divide & conquer algorithm
 // Rule - smaller on the left, larger on the right
 // -> O(NlogN)
+// -> O(N) - Space Complexity
 
 public class QuickSort {
     public static int FindPartitionIndex(int arr[], int low, int high) {
