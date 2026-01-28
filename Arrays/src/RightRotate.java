@@ -31,7 +31,7 @@ public class RightRotate {
     }
 
     // OPTIMAL SOLUTION
-    // TC -> O(2N-d) -> O(N)
+    // TC -> O(2N) -> O(N)
     // SC -> O(1)
     public static void ReverseArray(int arr[], int start, int end) {
         while (start < end) {
@@ -47,8 +47,9 @@ public class RightRotate {
         if (n == 1 || pos == 0) return arr;
 
         int d = pos % n;
-        ReverseArray(arr, 0, n-1-d);    // -> O(n-d)
-        ReverseArray(arr, 0, n-1);      // -> O(n)
+        ReverseArray(arr, 0, n-1);            // -> O(n)
+        ReverseArray(arr, 0, d-1);     // -> O(d)
+        ReverseArray(arr, d, n-1);          // -> O(n-d)
 
         return arr;
     }
