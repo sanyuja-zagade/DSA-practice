@@ -16,6 +16,7 @@ public class ZerosAtEnd {
                 break;
             }
         }
+        if (j == -1) return arr;
         for (int i=j+1; i<arr.length; i++) {    // -> O(N-X)
             if (arr[i] != 0) {
                 int temp = arr[i];
