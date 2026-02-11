@@ -1,13 +1,14 @@
 // Q. Best time to buy and sell stock so that it can make a maximum profit
 
+// TC -> O(N)
+// SC -> O(1)
 public class BuyAndSellStock {
     public static int BestTimeToBuyAndSell(int prices[]) {
         int minPrice = prices[0];
         int maxProfit = 0;
         for (int i=0; i<prices.length; i++) {
-            int cost = prices[i] - minPrice;
-            maxProfit = Math.max(maxProfit, cost);
             minPrice = Math.min(minPrice, prices[i]);
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice);
         }
         return maxProfit;
     }
