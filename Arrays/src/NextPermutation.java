@@ -13,14 +13,15 @@ public class NextPermutation {
     // SC -> O(1)
     public static int[] NextPermutationOptimal(int arr[]) {
         int index = -1;
-        for (int i=arr.length-1; i>=0; i--) {
+        for (int i=arr.length-1; i>0; i--) {
             if (arr[i-1] < arr[i]) {
                 index = i-1;
                 break;
             }
         }
         if (index == -1) {
-            ReverseArray(arr, index, arr.length - 1);
+            ReverseArray(arr, 0, arr.length - 1);
+            return arr;
         }
         for (int i=arr.length-1; i>index; i--) {
             if (arr[i] > arr[index]) {
@@ -45,7 +46,7 @@ public class NextPermutation {
     }
 
     public static void main(String args[]) {
-        int arr[] = {2, 1, 5, 4, 3, 0, 0};
+        int arr[] = {5, 4, 3, 2, 1};
 
         int[] nextPermutation = NextPermutationOptimal(arr);
 
