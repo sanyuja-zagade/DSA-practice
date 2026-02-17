@@ -1,3 +1,5 @@
+package SinglyLL;
+
 // Creating LL
 public class Node {
     int data;

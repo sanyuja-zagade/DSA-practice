@@ -1,3 +1,7 @@
+package SinglyLL;
+
+import SinglyLL.Node;
+
 public class BasicOperations {
     // Initializing LL for array
     private static Node InitializeLL(int arr[]) {
