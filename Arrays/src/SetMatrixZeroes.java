@@ -61,7 +61,7 @@ public class SetMatrixZeroes {
     }
 
     // OPTIMAL APPROACH
-    // TC -> O(N^2)
+    // TC -> O(N * M)
     // SC -> O(1)
     public static int[][] SetMatrixZeroOptimal(int matrix[][]) {
         int n = matrix.length;
