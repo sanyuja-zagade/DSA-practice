@@ -40,6 +40,8 @@ public class SearchInMatrix {
     }
 
     // OPTIMAL APPROACH
+    // TC -> O(log(base 2) N*M)
+    // SC -> O(1)
     public static boolean OptimalSolution(int matrix[][], int ele) {
         int n = matrix.length, m = matrix[0].length;
         int low = 0, high = (n * m) - 1;
