@@ -1,5 +1,5 @@
 public class FindPeakElement {
-    // BETTER APPROACH
+    // BRUTE APPROACH
     public static int BruteSolution(int arr[]) {
         if (arr.length == 1) return 0;
         for (int i=0; i<arr.length; i++) {
