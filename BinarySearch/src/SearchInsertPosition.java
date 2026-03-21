@@ -23,7 +23,7 @@ public class SearchInsertPosition {
     public static void main(String args[]) {
         int arr[] = {1, 2, 4, 7};
 
-        int indexPosition = Solution(arr, 2);
+        int indexPosition = Solution(arr, 3);
 
         System.out.println(indexPosition);
     }

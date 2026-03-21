@@ -16,7 +16,7 @@ public class FindPeakElement {
         return index;
     }
     public static int Solution(int matrix[][]) {
-        int n = matrix.length, m = matrix[0].length;
+        int m = matrix[0].length;
         int low = 0, high = m-1;
         while (low <= high) {
             int mid = (low + high) / 2;

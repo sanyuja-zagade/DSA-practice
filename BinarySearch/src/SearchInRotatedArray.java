@@ -2,6 +2,8 @@
 
 public class SearchInRotatedArray {
     // BRUTE APPROACH - linear search
+    // TC -> O(N)
+    // SC -> O(1)
     public static int LinearSearch(int arr[], int x) {
         for (int i=0; i<arr.length; i++) {
             if (arr[i] == x) {

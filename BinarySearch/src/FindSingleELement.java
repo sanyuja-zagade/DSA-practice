@@ -21,7 +21,7 @@ public class FindSingleELement {
     // OPTIMAL APPROACH
     // (even, odd) --> left part don't have single element --> eliminate left part
     // (odd, even) --> right part don't have single element --> eliminate right part
-    // TC -> O(N)
+    // TC -> O(log(base 2)N)
     // SC -> O(1)
     public static int OptimalSolution(int arr[]) {
         if (arr.length == 1) return arr[0];

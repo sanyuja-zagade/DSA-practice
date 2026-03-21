@@ -1,4 +1,4 @@
-// Q. Return smallest index which contains maximum number of 1s in nXm matrix containing 0s & 1s, where is row is sorted
+// Q. Return smallest index which contains maximum number of 1s in nXm matrix containing 0s & 1s, where each row is sorted
 
 package BSOn2DArray;
 
