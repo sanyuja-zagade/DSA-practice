@@ -14,7 +14,7 @@ public class CanRotateToGoal {
     }
 
     // OPTIMAL APPROACH
-    // TC -> O(N)
+    // TC -> O(N^2)
     // SC -> O(N) [space used by newStr]
     public static boolean RotateStringOptimal(String s, String goal) {
         if (s.length() != goal.length()) return false;
