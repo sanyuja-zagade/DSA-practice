@@ -11,7 +11,8 @@ public class QueueStack {
     // TC -> O(N)
     public void push(int x) {
         q.add(x);
-        for (int i=0; i<q.size(); i++) {
+        int size = q.size();
+        for (int i=0; i<size-1; i++) {
             q.add(q.poll());    // q.poll = removes & returns front element, q.add = adds element at back
         }
     }
